@@ -1,5 +1,9 @@
 import React from 'react';
 
+import logoThonyTech from '../assets/logo-techfinal-1-removebg-preview.png';
+
+import ThemeToggle from './ThemeToggle';
+
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow">
@@ -7,7 +11,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0">
-              <img className="h-8 w-8" src="/logo.svg" alt="Logo" />
+              <img className="h-14 w-18" src={logoThonyTech} alt="Logo" />
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -19,6 +23,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center">
+            <ThemeToggle />
             <a href="#" className="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Log in</a>
             <a href="#" className="bg-indigo-500 text-white px-3 py-2 rounded-md text-sm font-medium">Sign up</a>
           </div>

@@ -1,11 +1,28 @@
+// tailwind.config.js
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './public/index.html',
+  ],
+  safelist: [
+    'bg-gray-900', // Adicione as classes que você usa dinamicamente
+    'text-gray-100',
+    // Adicione outras classes necessárias
+  ],
+  darkMode: "class",
   theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
+    extend: {
+      colors: {
+        night: {
+          background: '#1a202c',
+          text: '#f7fafc',
+        },
+        day: {
+          background: '#ffffff',
+          text: '#000000',
+        },
+      },
+    },
   },
   plugins: [],
-};
+}
